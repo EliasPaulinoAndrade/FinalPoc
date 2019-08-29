@@ -43,6 +43,18 @@
                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jSn-9u-Gyh">
                     <rect key="frame" x="20" y="176" width="374" height="216"/>
                 </pickerView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8F-aX-JOo">
+                    <rect key="frame" x="125" y="274" width="43.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvU-q3-zfv">
+                    <rect key="frame" x="293.5" y="274" width="37" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
             <constraints>
@@ -51,7 +63,11 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZkQ-8k-sYg" secondAttribute="trailing" constant="20" id="9MZ-wb-pCb"/>
                 <constraint firstItem="0qk-8E-EMd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Bu7-cT-VcT"/>
                 <constraint firstItem="jSn-9u-Gyh" firstAttribute="top" secondItem="ZkQ-8k-sYg" secondAttribute="bottom" constant="20" id="FgB-wZ-waa"/>
+                <constraint firstItem="B8F-aX-JOo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="125" id="J9d-9g-rVu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0qk-8E-EMd" secondAttribute="trailing" constant="20" id="Jq0-gT-zhv"/>
+                <constraint firstItem="B8F-aX-JOo" firstAttribute="top" secondItem="ZkQ-8k-sYg" secondAttribute="bottom" constant="118" id="Kg0-e0-R6M"/>
+                <constraint firstItem="MvU-q3-zfv" firstAttribute="leading" secondItem="B8F-aX-JOo" secondAttribute="trailing" constant="125" id="L62-yI-F68"/>
+                <constraint firstItem="MvU-q3-zfv" firstAttribute="centerY" secondItem="B8F-aX-JOo" secondAttribute="centerY" id="QX6-9s-QnQ"/>
                 <constraint firstItem="sDa-YE-Z7a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="VBL-6z-HnR"/>
                 <constraint firstItem="sDa-YE-Z7a" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="k4U-53-UCk"/>
                 <constraint firstItem="0qk-8E-EMd" firstAttribute="top" secondItem="sDa-YE-Z7a" secondAttribute="bottom" constant="20" id="mdE-Ie-7o3"/>
@@ -62,5 +78,20 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
         </view>
+        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NaN-ru-Q8r">
+            <rect key="frame" x="0.0" y="0.0" width="46" height="21"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+            <nil key="textColor"/>
+            <nil key="highlightedColor"/>
+        </label>
+        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VBD-R3-bR8">
+            <rect key="frame" x="0.0" y="0.0" width="46" height="21"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+            <nil key="textColor"/>
+            <nil key="highlightedColor"/>
+            <point key="canvasLocation" x="-443.47826086956525" y="-27.120535714285712"/>
+        </label>
     </objects>
 </document>
