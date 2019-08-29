@@ -95,6 +95,9 @@
 		E30412D023181AA20018A647 /* FinalPoc */ = {
 			isa = PBXGroup;
 			children = (
+				E304130123181B2E0018A647 /* Models */,
+				E304130023181B290018A647 /* ViewControllers */,
+				E30412FF23181B220018A647 /* Views */,
 				E30412D123181AA20018A647 /* AppDelegate.swift */,
 				E30412D323181AA20018A647 /* ViewController.swift */,
 				E30412D823181AA20018A647 /* Assets.xcassets */,
@@ -120,6 +123,27 @@
 				E30412F323181AA20018A647 /* Info.plist */,
 			);
 			path = FinalPocUITests;
+			sourceTree = "<group>";
+		};
+		E30412FF23181B220018A647 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E304130023181B290018A647 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E304130123181B2E0018A647 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
