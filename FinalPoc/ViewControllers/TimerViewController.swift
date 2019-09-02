@@ -22,12 +22,16 @@ class TimerViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         timerLabel.text = timeString(task: task)
-        runTimer()
+//        runTimer()
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(fireTimer))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(runTimer))
         timerView.addGestureRecognizer(tap)
         tap.cancelsTouchesInView = true
         
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        timer.invalidate()
     }
     
     init(task: Task) {
@@ -42,7 +46,9 @@ class TimerViewController: UIViewController {
     @IBAction func finishedTask(_ sender: UIButton) {
         timer.invalidate()
         let alertController = UIAlertController(title: "Task", message: "Your task has been completed", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
+            self.dismiss(animated: true, completion: nil)
+        }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
             self.runTimer()
         }
@@ -56,21 +62,20 @@ class TimerViewController: UIViewController {
     }
     
     func timeString(task: Task) -> String {
-//        let hours = Int(time) / 3600
-//        let minutes = Int(time) / 60 % 60
-//        let seconds = Int(time) % 60
-        
-        return String(format: "%02i:%02i", task.spendTime.hour, task.spendTime.minutes)
+ 
+        return String(format: "%02i:%02i", task.spendTime.minutes, task.spendTime.secs)
     }
     
     
     @objc func runTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
+        timerView.isUserInteractionEnabled = false
+        print("timer fired")
     }
     
     @objc func updateTimer() {
-        seconds -= 1
-        if seconds >= 0 {
+        task.increasingSec()
+        if task.seconds >= 0 {
             timerLabel.text = timeString(task: task)
         } else {
             timer.invalidate()
