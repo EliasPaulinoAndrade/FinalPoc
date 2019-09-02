@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0986F0E123181D2A002C57C2 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0986F0DF23181D2A002C57C2 /* TimerViewController.swift */; };
 		0986F0E223181D2A002C57C2 /* TimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0986F0E023181D2A002C57C2 /* TimerViewController.xib */; };
+		A483B58123181DF100862628 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A483B57F23181DF100862628 /* HomeViewController.swift */; };
+		A483B58223181DF100862628 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A483B58023181DF100862628 /* HomeViewController.xib */; };
 		E30412D223181AA20018A647 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30412D123181AA20018A647 /* AppDelegate.swift */; };
 		E30412D923181AA20018A647 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E30412D823181AA20018A647 /* Assets.xcassets */; };
 		E30412DC23181AA20018A647 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E30412DA23181AA20018A647 /* LaunchScreen.storyboard */; };
@@ -42,6 +44,8 @@
 /* Begin PBXFileReference section */
 		0986F0DF23181D2A002C57C2 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimerViewController.swift; path = FinalPoc/ViewControllers/TimerViewController.swift; sourceTree = SOURCE_ROOT; };
 		0986F0E023181D2A002C57C2 /* TimerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TimerViewController.xib; path = FinalPoc/Views/TimerViewController.xib; sourceTree = SOURCE_ROOT; };
+		A483B57F23181DF100862628 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = FinalPoc/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
+		A483B58023181DF100862628 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HomeViewController.xib; path = FinalPoc/Views/HomeViewController.xib; sourceTree = SOURCE_ROOT; };
 		E30412CE23181AA20018A647 /* FinalPoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalPoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E30412D123181AA20018A647 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E30412D823181AA20018A647 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +90,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0986F0E423181DF7002C57C2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		E30412C523181AA20018A647 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +123,7 @@
 				E39B5E3E231D3CD600469DB3 /* Extensions */,
 				E304130123181B2E0018A647 /* Models */,
 				E304130023181B290018A647 /* ViewControllers */,
+				0986F0E423181DF7002C57C2 /* Models */,
 				E30412FF23181B220018A647 /* Views */,
 				E30412D123181AA20018A647 /* AppDelegate.swift */,
 				E30412D823181AA20018A647 /* Assets.xcassets */,
@@ -142,8 +154,9 @@
 		E30412FF23181B220018A647 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0986F0E023181D2A002C57C2 /* TimerViewController.xib */,
+				A483B58023181DF100862628 /* HomeViewController.xib */,
 				E304130723181D730018A647 /* AddTaskViewController.xib */,
+				0986F0E023181D2A002C57C2 /* TimerViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,6 +164,8 @@
 		E304130023181B290018A647 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A483B57F23181DF100862628 /* HomeViewController.swift */,
+				0986F0DF23181D2A002C57C2 /* TimerViewController.swift */,
 				E304130623181D730018A647 /* AddTaskViewController.swift */,
 				E39B5E3C231D3B1800469DB3 /* AddTaskViewControllerDelegate.swift */,
 				0986F0DF23181D2A002C57C2 /* TimerViewController.swift */,
@@ -283,6 +298,7 @@
 				E30412DC23181AA20018A647 /* LaunchScreen.storyboard in Resources */,
 				E304130923181D730018A647 /* AddTaskViewController.xib in Resources */,
 				E30412D923181AA20018A647 /* Assets.xcassets in Resources */,
+				A483B58223181DF100862628 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +324,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0986F0E123181D2A002C57C2 /* TimerViewController.swift in Sources */,
+				E30412D223181AA20018A647 /* AppDelegate.swift in Sources */,
+				A483B58123181DF100862628 /* HomeViewController.swift in Sources */,
 				E39B5E3D231D3B1800469DB3 /* AddTaskViewControllerDelegate.swift in Sources */,
 				E304130B23181F9D0018A647 /* Task.swift in Sources */,
 				E304130823181D730018A647 /* AddTaskViewController.swift in Sources */,
@@ -481,7 +499,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z8P97P3QB4;
+				DEVELOPMENT_TEAM = H3RQC49HYF;
 				INFOPLIST_FILE = FinalPoc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -499,7 +517,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z8P97P3QB4;
+				DEVELOPMENT_TEAM = H3RQC49HYF;
 				INFOPLIST_FILE = FinalPoc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -15,18 +15,28 @@ class TimerViewController: UIViewController {
     var seconds = 20
     var isTimerCreated = false
     var timer = Timer()
+    var task: Task
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        timerLabel.text = timeString(time: TimeInterval(seconds))
+        timerLabel.text = timeString(task: task)
         runTimer()
-        
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(fireTimer))
         timerView.addGestureRecognizer(tap)
         tap.cancelsTouchesInView = true
+        
+    }
+    
+    init(task: Task) {
+        self.task = task
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     @IBAction func finishedTask(_ sender: UIButton) {
@@ -41,27 +51,27 @@ class TimerViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    @objc func fireTimer(time: Int) {
+    @objc func fireTimer() {
         print("Time started!!!")
     }
     
-    func timeString(time: TimeInterval) -> String {
-        let hours = Int(time) / 3600
-        let minutes = Int(time) / 60 % 60
-        let seconds = Int(time) % 60
+    func timeString(task: Task) -> String {
+//        let hours = Int(time) / 3600
+//        let minutes = Int(time) / 60 % 60
+//        let seconds = Int(time) % 60
         
-        return String(format: "%02i:%02i:%02i", hours, minutes, seconds)
+        return String(format: "%02i:%02i", task.spendTime.hour, task.spendTime.minutes)
     }
     
     
-    func runTimer() {
+    @objc func runTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
     }
     
     @objc func updateTimer() {
         seconds -= 1
         if seconds >= 0 {
-            timerLabel.text = timeString(time: TimeInterval(seconds))
+            timerLabel.text = timeString(task: task)
         } else {
             timer.invalidate()
             print("Time stopped")
