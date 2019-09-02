@@ -44,13 +44,19 @@
                     <rect key="frame" x="20" y="176" width="374" height="216"/>
                 </pickerView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8F-aX-JOo">
-                    <rect key="frame" x="125" y="274" width="43.5" height="21"/>
+                    <rect key="frame" x="133.5" y="273.5" width="50" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="yp6-nq-E9Y"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvU-q3-zfv">
-                    <rect key="frame" x="293.5" y="274" width="37" height="21"/>
+                    <rect key="frame" x="324" y="273.5" width="43" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="43" id="Wsd-sb-94e"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -63,17 +69,17 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZkQ-8k-sYg" secondAttribute="trailing" constant="20" id="9MZ-wb-pCb"/>
                 <constraint firstItem="0qk-8E-EMd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Bu7-cT-VcT"/>
                 <constraint firstItem="jSn-9u-Gyh" firstAttribute="top" secondItem="ZkQ-8k-sYg" secondAttribute="bottom" constant="20" id="FgB-wZ-waa"/>
-                <constraint firstItem="B8F-aX-JOo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="125" id="J9d-9g-rVu"/>
+                <constraint firstItem="MvU-q3-zfv" firstAttribute="centerX" secondItem="jSn-9u-Gyh" secondAttribute="centerX" multiplier="1.5" constant="35" id="HMv-2g-LnR"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0qk-8E-EMd" secondAttribute="trailing" constant="20" id="Jq0-gT-zhv"/>
-                <constraint firstItem="B8F-aX-JOo" firstAttribute="top" secondItem="ZkQ-8k-sYg" secondAttribute="bottom" constant="118" id="Kg0-e0-R6M"/>
-                <constraint firstItem="MvU-q3-zfv" firstAttribute="leading" secondItem="B8F-aX-JOo" secondAttribute="trailing" constant="125" id="L62-yI-F68"/>
                 <constraint firstItem="MvU-q3-zfv" firstAttribute="centerY" secondItem="B8F-aX-JOo" secondAttribute="centerY" id="QX6-9s-QnQ"/>
                 <constraint firstItem="sDa-YE-Z7a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="VBL-6z-HnR"/>
                 <constraint firstItem="sDa-YE-Z7a" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="k4U-53-UCk"/>
                 <constraint firstItem="0qk-8E-EMd" firstAttribute="top" secondItem="sDa-YE-Z7a" secondAttribute="bottom" constant="20" id="mdE-Ie-7o3"/>
+                <constraint firstItem="B8F-aX-JOo" firstAttribute="centerY" secondItem="jSn-9u-Gyh" secondAttribute="centerY" id="sFN-he-TiE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jSn-9u-Gyh" secondAttribute="trailing" constant="20" id="uBs-3Q-uWA"/>
                 <constraint firstItem="ZkQ-8k-sYg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="x5i-42-Ckw"/>
                 <constraint firstItem="jSn-9u-Gyh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="yUt-8l-K4x"/>
+                <constraint firstItem="B8F-aX-JOo" firstAttribute="centerX" secondItem="jSn-9u-Gyh" secondAttribute="centerX" multiplier="0.5" constant="55" id="zEZ-Vb-j0K"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
