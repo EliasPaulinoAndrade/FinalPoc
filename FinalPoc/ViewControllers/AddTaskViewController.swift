@@ -45,8 +45,10 @@ class AddTaskViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = saveButton
         self.navigationItem.leftBarButtonItem = cancelButton
         self.navigationController?.navigationBar.backgroundColor = UIColor.white
+        self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.removeBorder()
     }
+
 }
 
 extension AddTaskViewController {
@@ -55,7 +57,6 @@ extension AddTaskViewController {
             guard let self = self else {
                 return
             }
-            
             self.delegate?.taskWasAdd(task: self.selectedTask)
         }
     }
