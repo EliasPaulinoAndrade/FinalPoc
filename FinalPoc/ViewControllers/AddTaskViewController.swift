@@ -31,7 +31,7 @@ class AddTaskViewController: UIViewController {
     }()
     
     var selectedTask: Task {
-        return Task(name: nameTextField.text ?? "", spendTime: timePickerView.selectedTime)
+        return Task(name: nameTextField.text ?? "", spendTime: self.timePickerView.selectedTime)
     }
     
     override func viewDidLoad() {
@@ -57,6 +57,7 @@ extension AddTaskViewController {
             guard let self = self else {
                 return
             }
+            print(self.selectedTask)
             self.delegate?.taskWasAdd(task: self.selectedTask)
         }
     }
@@ -72,9 +73,6 @@ extension AddTaskViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if component == 0 {
-            return 24
-        }
         return 60
     }
     
