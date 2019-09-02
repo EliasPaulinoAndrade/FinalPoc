@@ -38,12 +38,14 @@ class HomeViewController: UIViewController {
     private func addTask(_ task: Task) {
         tasks.append(task)
         let indexPath = IndexPath(row: tasks.count - 1, section: 0)
-        tableView.insertRows(at: [indexPath], with: .right)
+        tableView.insertRows(at: [indexPath], with: .left)
     }
     
     @objc func gotToAddTaskVC(_ sender: UIBarButtonItem) {
-        let vc = UINavigationController(rootViewController: AddTaskViewController())
-        present(vc, animated: true, completion: nil)
+        let navController = UINavigationController(rootViewController: AddTaskViewController())
+        guard let vc = navController.viewControllers.first as? AddTaskViewController else { return }
+        vc.delegate = self
+        present(navController, animated: true, completion: nil)
     }
 }
 
@@ -59,10 +61,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.accessoryView?.tintColor = .orange
         
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
     }
 }
 
