@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimerViewController" customModule="FinalPoc" customModuleProvider="target">
+            <connections>
+                <outlet property="timerLabel" destination="Wgs-bA-nqN" id="skd-hP-Fqh"/>
+                <outlet property="timerView" destination="Xh9-jG-aH5" id="Ydm-Uk-MPC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xh9-jG-aH5">
+                    <rect key="frame" x="62" y="318.5" width="290" height="269"/>
+                    <color key="backgroundColor" red="0.49098402754829629" green="0.60942312736899018" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wgs-bA-nqN">
+                    <rect key="frame" x="105.5" y="418.5" width="203" height="69"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="203" id="0Aa-5i-5QJ"/>
+                        <constraint firstAttribute="height" constant="69" id="MTL-WA-pWV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Y8c-aT-nSf">
+                    <rect key="frame" x="163" y="608" width="88" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36L-H3-XHJ">
+                            <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
+                            <color key="backgroundColor" red="0.91535783678756477" green="0.2823815574029433" blue="0.10049810535593864" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62e-3z-Gic">
+                            <rect key="frame" x="58" y="0.0" width="30" height="30"/>
+                            <color key="backgroundColor" red="0.18915542727016627" green="0.91535783678756477" blue="0.19890774445602125" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <state key="normal" title="OK">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="finishedTask:" destination="-1" eventType="touchUpInside" id="Ffv-05-QQz"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Wgs-bA-nqN" firstAttribute="centerY" secondItem="Xh9-jG-aH5" secondAttribute="centerY" id="9cv-Iv-7eA"/>
+                <constraint firstItem="Xh9-jG-aH5" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.7" id="OcM-gB-DP4"/>
+                <constraint firstItem="Xh9-jG-aH5" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="TNu-sH-UhE"/>
+                <constraint firstItem="Y8c-aT-nSf" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="dMD-LV-E1V"/>
+                <constraint firstItem="Xh9-jG-aH5" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.3" id="dUk-2i-v5n"/>
+                <constraint firstItem="Y8c-aT-nSf" firstAttribute="top" secondItem="Xh9-jG-aH5" secondAttribute="bottom" constant="20.5" id="gpO-5D-kg5"/>
+                <constraint firstItem="Wgs-bA-nqN" firstAttribute="centerX" secondItem="Xh9-jG-aH5" secondAttribute="centerX" id="hvS-kG-jaK"/>
+                <constraint firstItem="Xh9-jG-aH5" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="y8g-tc-JGk"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-1252" y="87"/>
+        </view>
+    </objects>
+</document>

@@ -62,6 +62,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = TimerViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension HomeViewController: AddTaskViewControllerDelegate {
