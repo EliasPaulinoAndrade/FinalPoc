@@ -18,10 +18,45 @@ class AddTaskViewController: UIViewController {
         }
     }
     
+    public weak var delegate: AddTaskViewControllerDelegate?
+    
+    lazy var saveButton: UIBarButtonItem = {
+        let saveButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveTapped))
+        return saveButton
+    }()
+    
+    lazy var cancelButton: UIBarButtonItem = {
+        let cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelTapped))
+        return cancelButton
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        setupNavigationController()
+    }
+    
+    func setupNavigationController() {
+        self.title = "New Task"
+        self.navigationItem.rightBarButtonItem = saveButton
+        self.navigationItem.leftBarButtonItem = cancelButton
+    }
+    
+    @objc func saveTapped() {
+        dismiss(animated: true) { [weak self] in
+            guard let self = self else {
+                return
+            }
+            let task = Task(name: self.nameTextField.text ?? "", spendTime: (
+                hour: self.timePickerView.selectedRow(inComponent: 0),
+                minutes: self.timePickerView.selectedRow(inComponent: 1)
+            ))
+            self.delegate?.taskWasAdd(task: task)
+        }
+    }
+    
+    @objc func cancelTapped() {
+        dismiss(animated: true, completion: nil)
     }
 }
 

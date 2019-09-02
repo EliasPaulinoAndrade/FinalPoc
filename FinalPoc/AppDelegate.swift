@@ -16,11 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        let firstResponder = AddTaskViewController()
+        let parentController = UIViewController()
+        let firstResponder = UINavigationController(rootViewController: AddTaskViewController())
+        
+        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { (_) in
+            DispatchQueue.main.async {
+                parentController.present(firstResponder, animated: true, completion: nil)
+            }
+        }
+        
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        window?.rootViewController = firstResponder
+        window?.rootViewController = parentController
         
         window?.makeKeyAndVisible()
 
