@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         
         let homeViewController = HomeViewController()
+        homeViewController.title = "Daily Tasks"
         let navigationController = UINavigationController(rootViewController: homeViewController)
         navigationController.navigationBar.isTranslucent = false
         navigationController.navigationBar.prefersLargeTitles = true
