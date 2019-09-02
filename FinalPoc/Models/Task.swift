@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias Time = (hour: Int, minutes: Int)
+
 struct Task {
     var name: String
     var spendTime: (hour: Int, minutes: Int)
