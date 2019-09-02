@@ -30,6 +30,10 @@ class AddTaskViewController: UIViewController {
         return cancelButton
     }()
     
+    var selectedTask: Task {
+        return Task(name: nameTextField.text ?? "", spendTime: timePickerView.selectedTime)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,18 +44,19 @@ class AddTaskViewController: UIViewController {
         self.title = "New Task"
         self.navigationItem.rightBarButtonItem = saveButton
         self.navigationItem.leftBarButtonItem = cancelButton
+        self.navigationController?.navigationBar.backgroundColor = UIColor.white
+        self.navigationController?.removeBorder()
     }
-    
+}
+
+extension AddTaskViewController {
     @objc func saveTapped() {
         dismiss(animated: true) { [weak self] in
             guard let self = self else {
                 return
             }
-            let task = Task(name: self.nameTextField.text ?? "", spendTime: (
-                hour: self.timePickerView.selectedRow(inComponent: 0),
-                minutes: self.timePickerView.selectedRow(inComponent: 1)
-            ))
-            self.delegate?.taskWasAdd(task: task)
+            
+            self.delegate?.taskWasAdd(task: self.selectedTask)
         }
     }
     
@@ -74,5 +79,11 @@ extension AddTaskViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return "\(row)"
+    }
+}
+
+private extension UIPickerView {
+    var selectedTime: Time {
+        return (self.selectedRow(inComponent: 0), self.selectedRow(inComponent: 1))
     }
 }
