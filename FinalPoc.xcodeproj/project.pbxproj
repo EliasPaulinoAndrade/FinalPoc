@@ -14,6 +14,11 @@
 		E30412DC23181AA20018A647 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E30412DA23181AA20018A647 /* LaunchScreen.storyboard */; };
 		E30412E723181AA20018A647 /* FinalPocTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30412E623181AA20018A647 /* FinalPocTests.swift */; };
 		E30412F223181AA20018A647 /* FinalPocUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30412F123181AA20018A647 /* FinalPocUITests.swift */; };
+		E304130823181D730018A647 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E304130623181D730018A647 /* AddTaskViewController.swift */; };
+		E304130923181D730018A647 /* AddTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E304130723181D730018A647 /* AddTaskViewController.xib */; };
+		E304130B23181F9D0018A647 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = E304130A23181F9D0018A647 /* Task.swift */; };
+		E39B5E3B231D399300469DB3 /* UINavigationController+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39B5E3A231D399300469DB3 /* UINavigationController+init.swift */; };
+		E39B5E3D231D3B1800469DB3 /* AddTaskViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39B5E3C231D3B1800469DB3 /* AddTaskViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +40,7 @@
 
 /* Begin PBXFileReference section */
 		A483B57F23181DF100862628 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = FinalPoc/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
-		A483B58023181DF100862628 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HomeViewController.xib; path = FinalPoc/HomeViewController.xib; sourceTree = SOURCE_ROOT; };
+		A483B58023181DF100862628 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HomeViewController.xib; path = FinalPoc/Views/HomeViewController.xib; sourceTree = SOURCE_ROOT; };
 		E30412CE23181AA20018A647 /* FinalPoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalPoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E30412D123181AA20018A647 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E30412D823181AA20018A647 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,6 +52,11 @@
 		E30412ED23181AA20018A647 /* FinalPocUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinalPocUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E30412F123181AA20018A647 /* FinalPocUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalPocUITests.swift; sourceTree = "<group>"; };
 		E30412F323181AA20018A647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E304130623181D730018A647 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		E304130723181D730018A647 /* AddTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTaskViewController.xib; sourceTree = "<group>"; };
+		E304130A23181F9D0018A647 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		E39B5E3A231D399300469DB3 /* UINavigationController+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+init.swift"; sourceTree = "<group>"; };
+		E39B5E3C231D3B1800469DB3 /* AddTaskViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +139,8 @@
 		E30412FF23181B220018A647 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A483B58023181DF100862628 /* HomeViewController.xib */,
+				E304130723181D730018A647 /* AddTaskViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -137,7 +149,9 @@
 			isa = PBXGroup;
 			children = (
 				A483B57F23181DF100862628 /* HomeViewController.swift */,
-				A483B58023181DF100862628 /* HomeViewController.xib */,
+				E304130623181D730018A647 /* AddTaskViewController.swift */,
+				E39B5E3A231D399300469DB3 /* UINavigationController+init.swift */,
+				E39B5E3C231D3B1800469DB3 /* AddTaskViewControllerDelegate.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -145,6 +159,7 @@
 		E304130123181B2E0018A647 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E304130A23181F9D0018A647 /* Task.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -254,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E30412DC23181AA20018A647 /* LaunchScreen.storyboard in Resources */,
+				E304130923181D730018A647 /* AddTaskViewController.xib in Resources */,
 				E30412D923181AA20018A647 /* Assets.xcassets in Resources */,
 				A483B58223181DF100862628 /* HomeViewController.xib in Resources */,
 			);
@@ -282,6 +298,11 @@
 			files = (
 				E30412D223181AA20018A647 /* AppDelegate.swift in Sources */,
 				A483B58123181DF100862628 /* HomeViewController.swift in Sources */,
+				E39B5E3D231D3B1800469DB3 /* AddTaskViewControllerDelegate.swift in Sources */,
+				E304130B23181F9D0018A647 /* Task.swift in Sources */,
+				E304130823181D730018A647 /* AddTaskViewController.swift in Sources */,
+				E30412D223181AA20018A647 /* AppDelegate.swift in Sources */,
+				E39B5E3B231D399300469DB3 /* UINavigationController+init.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
